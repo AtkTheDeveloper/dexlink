@@ -10,9 +10,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-.main-content{
-    display: none;
-}
 .splash-screen{
     position: fixed;
     background-color: #FFDD00;
@@ -32,6 +29,11 @@ body{
 .splash-screen h1{
     font-size: 3rem;
     margin-bottom: 30px;
+}
+.splash-screen img{
+    align-self: center;
+    display: block;
+    margin: 0 auto;
 }
 
 @keyframes fadeOut {

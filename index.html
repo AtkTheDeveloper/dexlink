@@ -9,21 +9,16 @@
 <body>
   <div class="splash-screen">
     <h1>Welcome To DexLink</h1>
-    <img src="./images/splash.png" alt="An image showing a note icon">
+    <img src="./images/splash.png" alt="Outlined note icon with a pencil overlay, representing writing or editing a document, set against a plain background, conveying a neutral and professional tone">
   </div>
 
-  <div class="main-content">
-    <h2>Main Content</h2>
-    <p>This is where the main content of the website will go.</p>
-  </div>
 
 <script>
   const splash = document.querySelector('.splash-screen');
-  const main = document.querySelector('.main-content');
 
   splash.addEventListener('animationend', () => {
     splash.style.display = 'none';
-    main.style.display = 'block';
+    window.location.href = 'signup.html';
   });
 </script>
 </body>
