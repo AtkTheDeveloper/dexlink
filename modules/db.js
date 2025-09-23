@@ -1,3 +1,5 @@
+console.log("DB Module Loaded");
+
 const DB_NAME = "DexLinkDB";
 const DB_VERSION = 1;
 const USER_STORE = "users";
