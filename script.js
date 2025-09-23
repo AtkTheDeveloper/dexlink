@@ -1,3 +1,5 @@
+import {openDatabase, createUser} from "./modules/db.js";
+
 const splash = document.querySelector(".splash-screen");
 const app = document.getElementById("app");
 
@@ -32,18 +34,33 @@ try{
         loginForm.classList.remove("active");
     });
 
+
+    signupForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+       
+        const form = e.target;
+
+        const user = {
+            username: form.username.value.trim(),
+            email: form.email.value.trim(),
+            password: form.password.value.trim(),
+            createdAt: new Date().toISOString()
+        }
+
+        try {
+            await openDatabase();
+            await createUser(user);
+            alert("User created successfully!");
+        } catch (error) {
+            console.error("Error creating user:", error);
+        }
+        form.reset();
+    });
+
 } catch (error) {
         console.error("There has been a problem with your fetch operation:",error);
     }
 });
-
-
-
-    
-        
-        
-
-        // Move the toggle logic here, after the HTML is loaded
         
         
 
