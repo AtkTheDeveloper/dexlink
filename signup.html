@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login / SignUp</title>
-</head>
-<body>
-    <h1>This is the Login / SignUp page</h1>
+<html>
+<body>  
+    <div class="form-container">
+        <!-- Tab Buttons -->
+      <div class="toggle-buttons">
+        <button id="show-login" class="active">Login</button>
+        <button id="show-signup">Sign Up</button>
+      </div>
+
+      <!-- Signup Form -->
+      <form id="signup-form" class="active">
+        <h2>Create An Account</h2>
+        <input type="text" name="username" placeholder="Username"><br><br>
+        <input type="email" name="email" placeholder="Email"><br><br>
+        <input type="password" name="password" placeholder="Password"><br><br>
+        <button type="submit" class="form-btn">Sign Up</button>
+      </form>
+
+    <!-- Login Form -->
+    <form id="login-form">
+      <h2>Login Here</h2>
+      <input type="text" name="username" placeholder="Username"><br><br>
+      <input type="password" name="password" placeholder="Password"><br><br>
+      <button type="submit" class="form-btn">Login</button>
+    </form>
+
+  </div>
 </body>
 </html>
