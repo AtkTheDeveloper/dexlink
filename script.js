@@ -1,4 +1,4 @@
-import {openDatabase, createUser} from "./modules/db.js";
+import {openDatabase, createUser, getUser} from "./modules/db.js";
 
 const splash = document.querySelector(".splash-screen");
 const app = document.getElementById("app");
@@ -57,7 +57,27 @@ try{
         form.reset();
     });
 
+    loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const username = form.username.value.trim();
+        const password = form.password.value.trim();
+
+        try {
+            await openDatabase();
+            await getUser(username, password);
+            alert("Login successful!");
+        } catch (error) {
+            console.log("Error logging in:", error);
+        }
+        form.reset();
+    });
+
 } catch (error) {
         console.error("There has been a problem with your fetch operation:",error);
     }
+
+
 });

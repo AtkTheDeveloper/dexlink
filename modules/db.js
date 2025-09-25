@@ -1,5 +1,3 @@
-console.log("DB Module Loaded");
-
 const DB_NAME = "DexLinkDB";
 const DB_VERSION = 1;
 const USER_STORE = "users";
@@ -59,4 +57,29 @@ async function createUser(user) {
     });
 }
 
-export { openDatabase, createUser };
+async function getUser(username, password){
+    const db = await openDatabase();
+    return new Promise((resolve, reject) => {
+        const tx = db.transaction(USER_STORE, "readonly");
+        const store = tx.objectStore(USER_STORE);
+        const cursorRequest = store.openCursor();
+
+        cursorRequest.onsuccess = e => {
+            const cursor = e.target.result;
+            if(cursor){
+                if(cursor.value.username === username && cursor.value.password === password){
+                    resolve(cursor.value);
+                    return;
+                }
+                cursor.continue();
+            } else {
+                reject(alert("Invalid Username or Password"));
+            }
+        };
+
+        cursorRequest.onerror = e => {
+            reject(cursorRequest.error);
+        }
+    });
+}
+export { openDatabase, createUser, getUser};
