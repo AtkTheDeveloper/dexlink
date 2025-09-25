@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #e6ecfa;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #1c2b5a;
+  margin-bottom: 30px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1c2b5a;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 40px;
+  background-color: #e6ecfa;
+}
+
+/* Add Note Card */
+.note-card {
+  background-color: #f2f4fb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.note-card h3,
+.note-card h4 {
+  color: #3c4a6e;
+  margin-bottom: 10px;
+}
+
+.note-card textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  resize: none;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* Notes Section */
+.my-notes h3 {
+  color: #1c2b5a;
+  margin-bottom: 5px;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/* Notes List */
+.notes-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.note-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 250px; /* Grow, shrink, base width */
+  max-width: 300px;
+}
+
+
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.note-header h4 {
+  font-size: 1.1rem;
+  color: #1c2b5a;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.note-item p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.note-date {
+  font-size: 0.8rem;
+  color: gray;
+}

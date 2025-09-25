@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DexLink | Notes</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+     <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Notes App</h2>
+      <button class="nav-button">📝 Notes</button>
+      <button class="nav-button">🗑️ Trash</button>
+      <button class="nav-button">📝 Settings</button>
+      <button class="nav-button">📝 Help</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Add Note Card -->
+      <div class="note-card">
+        <h3>Add a Note</h3>
+        <h4>Title</h4>
+        <textarea placeholder="Take a note..."></textarea>
+      </div>
+
+      <!-- My Notes Section -->
+      <section class="my-notes">
+        <h3>📝 My Notes</h3>
+        <p class="subtext">Recently viewed</p>
+        
+        <div class="notes-list">
+          <!-- Single Note Card -->
+          <div class="note-item">
+            <div class="note-header">
+              <h4>Feedbacks</h4>
+              <div class="icons">
+                ✏️
+                🗑️
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur. Sollicitudin enim risus ut vestibulum morbi tellus sit ac...</p>
+            <span class="note-date">5 days ago</span>
+          </div>
+
+          <div class="note-item">
+            <div class="note-header">
+              <h4>Weekly Task</h4>
+              <div class="icons">
+                ✏️
+                🗑️
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur. Sollicitudin enim risus ut vestibulum morbi tellus sit ac...</p>
+            <span class="note-date">2 weeks ago</span>
+          </div>
+
+          <div class="note-item">
+            <div class="note-header">
+              <h4>Lyrics</h4>
+              <div class="icons">
+                ✏️
+                🗑️
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur. Sollicitudin enim risus ut vestibulum morbi tellus sit ac...</p>
+            <span class="note-date">3 weeks ago</span>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- User Details -->
+     <aside>
+        <div class="user-details">
+            <p>John Doe</p>
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <button>🔒 Logout</button>
+     </aside>
+  </div>
+
+    <script src="notes.js"></script>
+</body>
+</html>
