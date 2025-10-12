@@ -12,6 +12,11 @@ window.addEventListener('DOMContentLoaded', () => {
 logoutBtn = document.getElementById('logout');
 
 logoutBtn.addEventListener('click', () => {
+  warning = confirm("Are you sure you want to logout?");
+
+  if(!warning){
+    return;
+  }
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('loggedInUser');
     window.top.location.href = "../index.html";

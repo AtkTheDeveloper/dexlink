@@ -73,7 +73,7 @@ async function getUser(username, password){
                 }
                 cursor.continue();
             } else {
-                reject(alert("Invalid Username or Password"));
+                reject(alert("Wrong Username or Password"));
             }
         };
 
