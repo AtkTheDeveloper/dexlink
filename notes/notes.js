@@ -9,3 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+logoutBtn = document.getElementById('logout');
+
+logoutBtn.addEventListener('click', () => {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('loggedInUser');
+    window.top.location.href = "../index.html";
+});

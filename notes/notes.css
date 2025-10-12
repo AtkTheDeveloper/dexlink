@@ -39,7 +39,7 @@ body {
   gap: 20px;
 }
 .nav-button{
-  background-color: #FFDD00;
+  background-color: #1c2b5a;
   color: white;
   border: none;
   padding: 10px;
@@ -47,6 +47,49 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.nav-button:hover {
+  background-color: #051137;
+}
+
+/* User Details */
+.user-details-sidebar {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 15px;
+}
+.user-details {
+  display: flex;
+  align-items: center;
+}
+.user-details p {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #1c2b5a;
+}
+.user-details img {
+  border-radius: 50%;
+  border: 2px solid #1c2b5a;
+  cursor: pointer;
+}
+.user-details-sidebar button {
+  background-color: #de0808;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: auto; 
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.user-details-sidebar button:hover {
+  background-color: #930202;
 }
 
 /* Main Content */
@@ -70,9 +113,28 @@ body {
 .note-card h3,
 .note-card h4 {
   color: #3c4a6e;
-  margin-bottom: 10px;
+}
+.note-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
+.note-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.note-card input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
 .note-card textarea {
   width: 100%;
   height: 120px;
@@ -84,6 +146,20 @@ body {
   color: #333;
   background-color: #ffffff;
   box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
+.note-card button {
+  background-color: #1c2b5a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.note-card button:hover {
+  background-color: #051137;
 }
 
 /* Notes Section */
