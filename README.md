@@ -21,6 +21,8 @@
 
 ---
 
+## Live Link: https://dexlink.qzz.io
+
 ## Getting Started
 
 ### 1. Install / Use DexLink
@@ -89,7 +91,10 @@ See [LICENSE](LICENSE) for more details.
 
 ---
 
-## Contact
+## Contact Info
 
-Questions or suggestions?  
+### Questions or suggestions?  
 Open an issue or contact [AtkTheDeveloper](https://github.com/AtkTheDeveloper).
+
+**Email :** devatinka@gmail.com
+
