@@ -1,6 +1,7 @@
 const DB_NAME = "DexLinkDB";
 const DB_VERSION = 1;
 const USER_STORE = "users";
+const NOTE_STORE = "notes";
 
 function openDatabase() {
     return new Promise((resolve, reject) => {
@@ -10,6 +11,9 @@ function openDatabase() {
             const db = e.target.result;
             if (!db.objectStoreNames.contains(USER_STORE)) {
                 db.createObjectStore(USER_STORE, { keyPath: "id", autoIncrement: true });
+            }
+            if (!db.objectStoreNames.contains(NOTE_STORE)) {
+                db.createObjectStore(NOTE_STORE, { keyPath: "id", autoIncrement: true });
             }
         };
 
